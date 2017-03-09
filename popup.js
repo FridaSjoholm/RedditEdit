@@ -1,7 +1,8 @@
 
 function click(e) {
-  chrome.tabs.executeScript({code:"console.log('HI')"});
-  console.log({file:"script.js"})
+  chrome.tabs.executeScript(null, { file: "jquery-3.1.1.min.js" }, function() {
+    chrome.tabs.executeScript(null, { file: "script.js" });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
